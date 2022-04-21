@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+}
+
+/* Make the images invisible by default */
+.Containers {
+  display: none;
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption Info */
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Worknumbering (1/3 etc) */
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+
+/* cariusal section starts */
+
+/* .carousal_sec{
+    margin-left: 3.3rem;
+    background-color: aqua;
+} */
+.Carousal_heading{
+    font-size: 2.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    margin-left: 3.3rem;
+}
+.container{
+    /* background-color: red; */
+    display: flex;
+    overflow-x: visible;
+    height: 27rem;
+    width: 275rem;
+}
+.card{
+    background: #f5f7f8;
+    padding: 2rem;
+    margin-right: 1rem;
+    width: 24rem;
+}
+.card span svg{
+    margin-bottom: 1rem;
+}
+.card > p{
+    font-size: 1.25rem;
+    height: 80%;
+    /* background-color: #00838C; */
+}
+.card .card_footer{
+    height: 15%;
+    /* background-color: #00838C; */
+}
+.card a{
+    font-size: 1.875rem;
+    text-decoration: none;
+    color: #09757a;
+}
+.trustpilot_div{
+    display: flex;
+    justify-content: center;
+}
+.trustpilot{
+    width: 93%;
+    display: flex;
+}
+.trustpilot_div1{
+    width: 92%;
+}
+.trustpilot_div2{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 8%;
+    /* background-color: #00838C; */
+    justify-content: space-between;
+}
+.trustpilot_div2 span{
+    height: 3.25rem;
+    width: 3.25rem;
+    font-size: 3rem;
+    background-color: white;
+}
+.trustpilot img{
+    height: 2.5rem;
+}
+.trustpilot_p{
+    display: flex;
+}
+.trustpilot_p span{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: grey;
+}
+
+
+/* cariusal section ends */
+
+
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+    <!-- Slideshow container -->
+<div class="slideshow-container fade">
+
+    <section class="container">
+
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers" style="display: flex;">
+        <div style="display: flex;">
+        <div class="card">
+            <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+                <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>Searching for my domain name was a simple process and the system gave me alternatives which makes you think a bit wider. I could make the purchase with a couple of clicks and job done. Thank you</p>
+        <div class="card_footer">
+            <p>Donna Nelson</p>
+            <p>GoDaddy Customer</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+            <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+            <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+            <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+            <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+            <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+            <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+            <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+            <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+            <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+            <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+            </svg></span>
+    <p>I've used Go Daddy on three occasions, never once have I been disappointed by how well their site building tools operate or their exceptional, knowledgeable staff...I have looked at other options to build a website, let me just add, use Go Daddy, THEY'VE got what it takes!</p>
+    <div class="card_footer">
+        <p>James Edwards</p>
+        <p>GoDaddy Customer</p>
+    </div>
+</div>
+
+<div class="card">
+    <span><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+        <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+        <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+        <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+        <path d="M100 0H90.6304V18.75H100V0Z" fill="#D6D6D6"></path>
+        <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#D6D6D6"></path>
+        <path d="M9.3804 12.6412L12.2282 11.913L13.413 15.5869L9.3804 12.6412ZM15.9021 7.89124H10.8695L9.3804 3.16298L7.83692 7.88037H2.81519L6.8804 10.8152L5.33692 15.5434L9.39127 12.6195L11.8913 10.8152L15.9348 7.88037L15.9021 7.89124Z" fill="white"></path>
+        <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2283L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+        <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.5 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+        <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+        <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+        </svg></span>
+<p>I have been a loyal godaddy customer for many years. Their products and services are wonderful. I am a 'novice' in these 'digital' worlds, and godaddy makes it possible for me to navigate for myself, how I will, when I will . . . and they provide excellent 'backup' when I get 'lost' in the 'sea' of confusion! Thank you so much, GoDaddy! mc 2022</p>
+<div class="card_footer">
+    <p>MC</p>
+    <p>GoDaddy Customer</p>
+</div>
+</div>
+
+<div class="card">
+<span><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+    <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+    <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+    <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+    <path d="M100 0H90.6304V18.75H100V0Z" fill="#D6D6D6"></path>
+    <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#D6D6D6"></path>
+    <path d="M9.3804 12.6412L12.2282 11.913L13.413 15.5869L9.3804 12.6412ZM15.9021 7.89124H10.8695L9.3804 3.16298L7.83692 7.88037H2.81519L6.8804 10.8152L5.33692 15.5434L9.39127 12.6195L11.8913 10.8152L15.9348 7.88037L15.9021 7.89124Z" fill="white"></path>
+    <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2283L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+    <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.5 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+    <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+    <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+    </svg></span>
+<p>In editing the website, everything seems easy and user-friendly so far. Analytics are available to allow for a review of the website's performance.</p>
+<div class="card_footer">
+<p>Olivia Chase</p>
+<p>GoDaddy Customer</p>
+</div>
+</div>
+    </div>
+</div>
+  
+    <div class="Containers">
+        <div style="display: flex;">
+        <div class="card">
+            <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+                <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>Easy to use website and website builder with templates - and great customer support where I have always been connected within a few minutes.</p>
+        <div class="card_footer">
+            <p>Sean Flannery</p>
+            <p>GoDaddy Customer</p>
+        </div>
+        </div>
+        
+        <div class="card">
+            <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+                <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>Customer service as you would want it to be. I've been a customer for several years and their service has always been great. They always make sure you get the time and information you need to resolve the issue. Would recommend highly.</p>
+        <div class="card_footer">
+            <p>Chris Happy Customer</p>
+            <p>GoDaddy Customer</p>
+        </div>
+        </div>
+        
+        <div class="card">
+            <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+                <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>From day one it was easy to use and set up my website. To have all the hard work I have done to make my website the best it can be ratified by a GoDaddy representative and assessed as being on point and receiving more visits than average for a new website was the icing on the cake. Can't recommend this company highly enough.</p>
+        <div class="card_footer">
+            <p>Mark Mitchell</p>
+            <p>GoDaddy Customer</p>
+        </div>
+        </div>
+        
+        <div class="card">
+            <span><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#D6D6D6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#D6D6D6"></path>
+                <path d="M9.3804 12.6412L12.2282 11.913L13.413 15.5869L9.3804 12.6412ZM15.9021 7.89124H10.8695L9.3804 3.16298L7.83692 7.88037H2.81519L6.8804 10.8152L5.33692 15.5434L9.39127 12.6195L11.8913 10.8152L15.9348 7.88037L15.9021 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2283L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.5 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>There are so many products and services, as well as great customer service, that I've learned a lot and started a dozen websites in less than month. Their Tech Support is always right on point, no matter what the question is.</p>
+        <div class="card_footer">
+            <p>Naomi Lynch</p>
+            <p>GoDaddy Customer</p>
+        </div>
+        </div>
+    </div>
+</div>
+  
+    <div class="Containers">
+        <div style="display: flex;">
+        <div class="card">
+            <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+                <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>GoDaddy is a great way to set up your website! Easy to use and navigate, the finished product looks great and is also at the right price!</p>
+        <div class="card_footer">
+            <p>Karen Coatsworth</p>
+            <p>GoDaddy Customer</p>
+        </div>
+        </div>
+        
+        <div class="card">
+            <span style="height: 20px; width: 20px;"><svg style="height: 0.75rem; width: 4rem;" viewBox="0 0 100 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 0H0V18.75H18.75V0Z" fill="#00A4A6"></path>
+                <path d="M39.0652 0H20.3152V18.75H39.0652V0Z" fill="#00A4A6"></path>
+                <path d="M59.3804 0H40.6304V18.75H59.3804V0Z" fill="#00A4A6"></path>
+                <path d="M79.6848 0H60.9348V18.75H79.6848V0Z" fill="#00A4A6"></path>
+                <path d="M100 0H90.6304V18.75H100V0Z" fill="#00A4A6"></path>
+                <path d="M90.6304 0H81.25V18.75H90.6304V0Z" fill="#00A4A6"></path>
+                <path d="M9.38043 12.6412L12.2283 11.913L13.413 15.5869L9.38043 12.6412ZM15.9022 7.89124H10.8696L9.38043 3.16298L7.83695 7.88037H2.81521L6.88043 10.8152L5.33695 15.5434L9.3913 12.6195L11.8913 10.8152L15.9348 7.88037L15.9022 7.89124Z" fill="white"></path>
+                <path d="M29.6848 12.6412L32.5435 11.913L33.6956 15.5869L29.6848 12.6412ZM36.2065 7.89124H31.2282L29.6848 3.16298L28.1413 7.88037H23.1304L27.1739 10.8152L25.6304 15.5434L29.6956 12.6195L32.1956 10.8152L36.25 7.88037L36.2065 7.89124Z" fill="white"></path>
+                <path d="M49.9999 12.6412L52.8478 11.913L54.0434 15.5869L49.9999 12.6412ZM56.5217 7.88037H51.5434L49.9999 3.16298L48.4565 7.88037H43.4782L47.4999 10.8152L45.9565 15.5434L49.9999 12.6195L52.4999 10.8152L56.5217 7.88037Z" fill="white"></path>
+                <path d="M70.3152 12.6412L73.163 11.913L74.3587 15.5869L70.3152 12.6412ZM76.837 7.89124H71.8587L70.3152 3.16298L68.7717 7.88037H63.75L67.8152 10.8043L66.3043 15.5434L70.3696 12.6195L72.8261 10.8152L76.8804 7.88037L76.837 7.89124Z" fill="white"></path>
+                <path d="M90.6304 12.6412L93.4783 11.913L94.663 15.5869L90.6304 12.6412ZM97.1522 7.89124H92.163L90.6304 3.16298L89.1304 7.88037H84.0652L88.1304 10.8043L86.587 15.4891L90.6413 12.5652L93.1413 10.7608L97.1848 7.88037L97.1522 7.89124Z" fill="white"></path>
+                </svg></span>
+        <p>GoDaddy has been helping me meet my business needs since 2018. They have been my one-stop shop for all maters related to my website. I appreciate the prompt attention that I receive from their representatives and the 24/7 support.</p>
+        <div class="card_footer">
+            <p>PMAConsulting</p>
+            <p>GoDaddy Customer</p>
+        </div>
+        </div>
+        
+        <div class="card">
+            <a href="#">See all reviews</a>
+        </div>
+    </div>
+
+        
+
+
+    </div>
+
+</section>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <!-- <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+  </div>  -->
+
+
+  
+
+  <script>
+      var slidePosition = 1;
+SlideShow(slidePosition);
+
+// forward/Back controls
+function plusSlides(n) {
+  SlideShow(slidePosition += n);
+}
+
+//  images controls
+function currentSlide(n) {
+  SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  var circles = document.getElementsByClassName("dots");
+  if (n > slides.length) {slidePosition = 1}
+  if (n < 1) {slidePosition = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < circles.length; i++) {
+      circles[i].className = circles[i].className.replace(" enable", "");
+  }
+  slides[slidePosition-1].style.display = "block";
+  circles[slidePosition-1].className += " enable";
+} 
+  </script>
+</body>
+</html>
