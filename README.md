@@ -1,3 +1,3 @@
 # Godaddy
 
-Cloned application - HTML/CSS and Javascript
+Cloned application - HTML/CSS and Javascript.
